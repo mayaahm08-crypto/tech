@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress - EduLearn</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div style="display: flex; align-items: center; gap: 15px; flex: 1;">
+      <button class="navbar-toggle" style="background: none; border: none; font-size: 24px; cursor: pointer; display: none;">☰</button>
+      <div class="navbar-brand" style="margin: 0;">
+        🎓 <span>EduLearn</span>
+      </div>
+    </div>
+    <div class="navbar-actions">
+      <button class="theme-toggle" title="Toggle Dark Mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar closed">
+    <div class="sidebar-brand">
+      📚 Dashboard
+    </div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a href="student-dashboard.html" class="sidebar-menu-link">
+          <span>📊</span> Dashboard
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="student-courses.html" class="sidebar-menu-link">
+          <span>📖</span> My Courses
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="exams.html" class="sidebar-menu-link">
+          <span>📝</span> Exams
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="progress.html" class="sidebar-menu-link active">
+          <span>📈</span> Progress
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="student-profile.html" class="sidebar-menu-link">
+          <span>⚙️</span> Settings
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="#" class="sidebar-menu-link" onclick="PageNav.logout(); return false;">
+          <span>🚪</span> Logout
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">Your Learning Progress</h1>
+        <p class="page-subtitle">Track your achievements and learning milestones</p>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container" style="padding: 40px 20px;">
+      <!-- OVERALL STATS -->
+      <div class="grid grid-4" style="margin-bottom: 50px;">
+        <div class="stat-card">
+          <div class="stat-icon">⏱️</div>
+          <div class="stat-value">156</div>
+          <div class="stat-label">Hours Learned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-value">45%</div>
+          <div class="stat-label">Overall Progress</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📚</div>
+          <div class="stat-value">3</div>
+          <div class="stat-label">Completed Courses</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-value">12</div>
+          <div class="stat-label">Badges Earned</div>
+        </div>
+      </div>
+
+      <!-- PROGRESS BY COURSE -->
+      <div style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 30px;">Progress by Course</h2>
+        <div class="card">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color);">
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Course</th>
+                <th style="text-align: center; padding: 15px; font-weight: 600; color: var(--text-secondary);">Progress</th>
+                <th style="text-align: center; padding: 15px; font-weight: 600; color: var(--text-secondary);">Hours</th>
+                <th style="text-align: center; padding: 15px; font-weight: 600; color: var(--text-secondary);">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">Web Development Bootcamp</td>
+                <td style="padding: 15px; text-align: center;">
+                  <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+                    <div class="progress-bar" style="width: 100px; margin: 0;">
+                      <div class="progress-bar-fill" style="width: 65%;"></div>
+                    </div>
+                    <span style="font-weight: 600;">65%</span>
+                  </div>
+                </td>
+                <td style="padding: 15px; text-align: center;">34 hrs</td>
+                <td style="padding: 15px; text-align: center;"><span class="badge badge-info">In Progress</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">Python for Data Science</td>
+                <td style="padding: 15px; text-align: center;">
+                  <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+                    <div class="progress-bar" style="width: 100px; margin: 0;">
+                      <div class="progress-bar-fill" style="width: 42%;"></div>
+                    </div>
+                    <span style="font-weight: 600;">42%</span>
+                  </div>
+                </td>
+                <td style="padding: 15px; text-align: center;">28 hrs</td>
+                <td style="padding: 15px; text-align: center;"><span class="badge badge-info">In Progress</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">UI/UX Design Fundamentals</td>
+                <td style="padding: 15px; text-align: center;">
+                  <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+                    <div class="progress-bar" style="width: 100px; margin: 0;">
+                      <div class="progress-bar-fill" style="width: 100%;"></div>
+                    </div>
+                    <span style="font-weight: 600;">100%</span>
+                  </div>
+                </td>
+                <td style="padding: 15px; text-align: center;">24 hrs</td>
+                <td style="padding: 15px; text-align: center;"><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">Business Analytics</td>
+                <td style="padding: 15px; text-align: center;">
+                  <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+                    <div class="progress-bar" style="width: 100px; margin: 0;">
+                      <div class="progress-bar-fill" style="width: 100%;"></div>
+                    </div>
+                    <span style="font-weight: 600;">100%</span>
+                  </div>
+                </td>
+                <td style="padding: 15px; text-align: center;">18 hrs</td>
+                <td style="padding: 15px; text-align: center;"><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td style="padding: 15px;">Digital Marketing Mastery</td>
+                <td style="padding: 15px; text-align: center;">
+                  <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+                    <div class="progress-bar" style="width: 100px; margin: 0;">
+                      <div class="progress-bar-fill" style="width: 100%;"></div>
+                    </div>
+                    <span style="font-weight: 600;">100%</span>
+                  </div>
+                </td>
+                <td style="padding: 15px; text-align: center;">22 hrs</td>
+                <td style="padding: 15px; text-align: center;"><span class="badge badge-success">Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ACHIEVEMENTS -->
+      <div style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 30px;">🏆 Achievements & Badges</h2>
+        <div class="grid grid-4">
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 50px; margin-bottom: 10px;">🥇</div>
+            <h4>First Course</h4>
+            <p style="font-size: 13px;">Completed your first course</p>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 50px; margin-bottom: 10px;">🔥</div>
+            <h4>7-Day Streak</h4>
+            <p style="font-size: 13px;">7 days of learning</p>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 50px; margin-bottom: 10px;">⚡</div>
+            <h4>Quick Learner</h4>
+            <p style="font-size: 13px;">Completed a course in 7 days</p>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 50px; margin-bottom: 10px;">🎯</div>
+            <h4>Perfect Score</h4>
+            <p style="font-size: 13px;">Scored 100% on an exam</p>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 50px; margin-bottom: 10px;">📚</div>
+            <h4>Collector</h4>
+            <p style="font-size: 13px;">Enrolled in 5+ courses</p>
+          </div>
+          <div class="card" style="text-align: center; opacity: 0.5;">
+            <div style="font-size: 50px; margin-bottom: 10px;">🌟</div>
+            <h4>Expert</h4>
+            <p style="font-size: 13px;">Completed 10 courses</p>
+          </div>
+          <div class="card" style="text-align: center; opacity: 0.5;">
+            <div style="font-size: 50px; margin-bottom: 10px;">👑</div>
+            <h4>Master</h4>
+            <p style="font-size: 13px;">Completed 20 courses</p>
+          </div>
+          <div class="card" style="text-align: center; opacity: 0.5;">
+            <div style="font-size: 50px; margin-bottom: 10px;">🚀</div>
+            <h4>Superstar</h4>
+            <p style="font-size: 13px;">Earned 50 badges</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    @media (max-width: 768px) {
+      .navbar-toggle {
+        display: block !important;
+      }
+      
+      .sidebar {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        height: calc(100vh - 60px);
+        transform: translateX(-100%);
+        z-index: 98;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+    }
+  </style>
+
+  <script src="../js/app.js"></script>
+  <script>
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (navbarToggle) {
+      navbarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

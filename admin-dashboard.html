@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - EduLearn</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div style="display: flex; align-items: center; gap: 15px; flex: 1;">
+      <button class="navbar-toggle" style="background: none; border: none; font-size: 24px; cursor: pointer; display: none;">☰</button>
+      <div class="navbar-brand" style="margin: 0;">
+        🎓 <span>EduLearn</span>
+      </div>
+    </div>
+    <div class="navbar-actions">
+      <button class="theme-toggle" title="Toggle Dark Mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar closed">
+    <div class="sidebar-brand">
+      ⚙️ Admin
+    </div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a href="admin-dashboard.html" class="sidebar-menu-link active">
+          <span>📊</span> Dashboard
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="#" class="sidebar-menu-link">
+          <span>👥</span> Manage Users
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="#" class="sidebar-menu-link">
+          <span>📚</span> Manage Courses
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="#" class="sidebar-menu-link">
+          <span>💳</span> Payments
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="#" class="sidebar-menu-link">
+          <span>📈</span> Analytics
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="#" class="sidebar-menu-link">
+          <span>⚙️</span> Settings
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="#" class="sidebar-menu-link" onclick="PageNav.logout(); return false;">
+          <span>🚪</span> Logout
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">Admin Dashboard</h1>
+        <p class="page-subtitle">Manage platform, users, and analytics</p>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container" style="padding: 40px 20px;">
+      <!-- KEY METRICS -->
+      <div class="grid grid-4" style="margin-bottom: 50px;">
+        <div class="stat-card">
+          <div class="stat-icon">👥</div>
+          <div class="stat-value">12,450</div>
+          <div class="stat-label">Total Users</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📚</div>
+          <div class="stat-value">542</div>
+          <div class="stat-label">Courses</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💰</div>
+          <div class="stat-value">$485,200</div>
+          <div class="stat-label">Total Revenue</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📈</div>
+          <div class="stat-value">24.5%</div>
+          <div class="stat-label">Growth (30d)</div>
+        </div>
+      </div>
+
+      <!-- CHARTS SECTION -->
+      <div class="grid grid-2" style="margin-bottom: 50px; gap: 30px;">
+        <div class="card">
+          <h3 style="margin-bottom: 25px;">📊 Revenue Chart</h3>
+          <div style="height: 300px; background: linear-gradient(180deg, rgba(99,102,241,0.1), rgba(99,102,241,0.05)); border-radius: var(--radius-lg); display: flex; align-items: flex-end; padding: 20px; gap: 10px;">
+            <div style="flex: 1; background: var(--primary-color); border-radius: 4px; height: 60%;"></div>
+            <div style="flex: 1; background: var(--primary-color); border-radius: 4px; height: 75%;"></div>
+            <div style="flex: 1; background: var(--primary-color); border-radius: 4px; height: 85%;"></div>
+            <div style="flex: 1; background: var(--primary-color); border-radius: 4px; height: 70%;"></div>
+            <div style="flex: 1; background: var(--primary-dark); border-radius: 4px; height: 95%;"></div>
+          </div>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-top: 15px;">Last 5 months revenue trend</p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom: 25px;">📈 User Growth</h3>
+          <div style="height: 300px; background: linear-gradient(180deg, rgba(236,72,153,0.1), rgba(236,72,153,0.05)); border-radius: var(--radius-lg); display: flex; align-items: flex-end; padding: 20px; gap: 10px;">
+            <div style="flex: 1; background: var(--secondary-color); border-radius: 4px; height: 50%;"></div>
+            <div style="flex: 1; background: var(--secondary-color); border-radius: 4px; height: 65%;"></div>
+            <div style="flex: 1; background: var(--secondary-color); border-radius: 4px; height: 72%;"></div>
+            <div style="flex: 1; background: var(--secondary-color); border-radius: 4px; height: 80%;"></div>
+            <div style="flex: 1; background: var(--secondary-color); border-radius: 4px; height: 100%;"></div>
+          </div>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-top: 15px;">Monthly active users</p>
+        </div>
+      </div>
+
+      <!-- USER MANAGEMENT -->
+      <div style="margin-bottom: 50px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+          <h2>👥 Manage Users</h2>
+          <button class="btn btn-primary btn-sm">+ Add User</button>
+        </div>
+        <div class="card">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color);">
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">User</th>
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Email</th>
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Role</th>
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Status</th>
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">👨‍🎓 Sarah Miller</td>
+                <td style="padding: 15px;">sarah@example.com</td>
+                <td style="padding: 15px;"><span class="badge badge-info">Student</span></td>
+                <td style="padding: 15px;"><span class="badge badge-success">Active</span></td>
+                <td style="padding: 15px;">
+                  <button class="btn btn-secondary btn-sm" style="margin-right: 8px;">Edit</button>
+                  <button class="btn btn-secondary btn-sm">Remove</button>
+                </td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">👩‍🏫 Emma Davis</td>
+                <td style="padding: 15px;">emma@example.com</td>
+                <td style="padding: 15px;"><span class="badge badge-primary">Teacher</span></td>
+                <td style="padding: 15px;"><span class="badge badge-success">Active</span></td>
+                <td style="padding: 15px;">
+                  <button class="btn btn-secondary btn-sm" style="margin-right: 8px;">Edit</button>
+                  <button class="btn btn-secondary btn-sm">Remove</button>
+                </td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">👨‍💼 John Wilson</td>
+                <td style="padding: 15px;">john@example.com</td>
+                <td style="padding: 15px;"><span class="badge" style="background-color: rgba(99, 102, 241, 0.2); color: var(--primary-color);">Admin</span></td>
+                <td style="padding: 15px;"><span class="badge badge-success">Active</span></td>
+                <td style="padding: 15px;">
+                  <button class="btn btn-secondary btn-sm" style="margin-right: 8px;">Edit</button>
+                  <button class="btn btn-secondary btn-sm">Remove</button>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 15px;">👩‍🎓 Lisa Chen</td>
+                <td style="padding: 15px;">lisa@example.com</td>
+                <td style="padding: 15px;"><span class="badge badge-info">Student</span></td>
+                <td style="padding: 15px;"><span class="badge" style="background-color: rgba(241, 69, 69, 0.2); color: var(--danger-color);">Inactive</span></td>
+                <td style="padding: 15px;">
+                  <button class="btn btn-secondary btn-sm" style="margin-right: 8px;">Edit</button>
+                  <button class="btn btn-secondary btn-sm">Remove</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- COURSE MANAGEMENT -->
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+          <h2>📚 Manage Courses</h2>
+          <button class="btn btn-primary btn-sm">+ Add Course</button>
+        </div>
+        <div class="card">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color);">
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Course</th>
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Instructor</th>
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Students</th>
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Revenue</th>
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">Web Development Bootcamp</td>
+                <td style="padding: 15px;">Alex Johnson</td>
+                <td style="padding: 15px;">342</td>
+                <td style="padding: 15px;">$34,200</td>
+                <td style="padding: 15px;"><span class="badge badge-success">Published</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">Python for Data Science</td>
+                <td style="padding: 15px;">Dr. Sarah Chen</td>
+                <td style="padding: 15px;">289</td>
+                <td style="padding: 15px;">$28,900</td>
+                <td style="padding: 15px;"><span class="badge badge-success">Published</span></td>
+              </tr>
+              <tr>
+                <td style="padding: 15px;">Advanced JavaScript</td>
+                <td style="padding: 15px;">Michael Brown</td>
+                <td style="padding: 15px;">156</td>
+                <td style="padding: 15px;">$15,600</td>
+                <td style="padding: 15px;"><span class="badge badge-warning">Draft</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    @media (max-width: 768px) {
+      .navbar-toggle {
+        display: block !important;
+      }
+      
+      .sidebar {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        height: calc(100vh - 60px);
+        transform: translateX(-100%);
+        z-index: 98;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+    }
+  </style>
+
+  <script src="../js/app.js"></script>
+  <script>
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (navbarToggle) {
+      navbarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exams - EduLearn</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div style="display: flex; align-items: center; gap: 15px; flex: 1;">
+      <button class="navbar-toggle" style="background: none; border: none; font-size: 24px; cursor: pointer; display: none;">☰</button>
+      <div class="navbar-brand" style="margin: 0;">
+        🎓 <span>EduLearn</span>
+      </div>
+    </div>
+    <div class="navbar-actions">
+      <button class="theme-toggle" title="Toggle Dark Mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar closed">
+    <div class="sidebar-brand">
+      📚 Dashboard
+    </div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a href="student-dashboard.html" class="sidebar-menu-link">
+          <span>📊</span> Dashboard
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="student-courses.html" class="sidebar-menu-link">
+          <span>📖</span> My Courses
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="exams.html" class="sidebar-menu-link active">
+          <span>📝</span> Exams
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="progress.html" class="sidebar-menu-link">
+          <span>📈</span> Progress
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="student-profile.html" class="sidebar-menu-link">
+          <span>⚙️</span> Settings
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="#" class="sidebar-menu-link" onclick="PageNav.logout(); return false;">
+          <span>🚪</span> Logout
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">Exams & Quizzes</h1>
+        <p class="page-subtitle">Take tests to evaluate your knowledge</p>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container" style="padding: 40px 20px;">
+      <div class="grid grid-2" style="gap: 30px;">
+        <!-- EXAM 1 -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
+            <div>
+              <h3 style="margin-bottom: 8px;">Web Development Midterm</h3>
+              <p style="color: var(--text-secondary); font-size: 14px;">by Alex Johnson</p>
+            </div>
+            <span class="badge badge-success">Passed</span>
+          </div>
+          <div style="background-color: rgba(16, 185, 129, 0.1); padding: 15px; border-radius: var(--radius-lg); margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <span style="font-weight: 600;">Your Score:</span>
+              <span style="font-size: 24px; font-weight: 700; color: var(--success-color);">86%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 86%; background: linear-gradient(90deg, var(--success-color), #34d399);"></div>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; text-align: center;">
+            <div>
+              <p style="color: var(--text-secondary); font-size: 13px;">Questions</p>
+              <p style="font-weight: 600;">43/50</p>
+            </div>
+            <div>
+              <p style="color: var(--text-secondary); font-size: 13px;">Duration</p>
+              <p style="font-weight: 600;">45 min</p>
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="width: 100%;">View Results</button>
+        </div>
+
+        <!-- EXAM 2 -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
+            <div>
+              <h3 style="margin-bottom: 8px;">Python Quiz 2</h3>
+              <p style="color: var(--text-secondary); font-size: 14px;">by Dr. Sarah Chen</p>
+            </div>
+            <span class="badge badge-success">Passed</span>
+          </div>
+          <div style="background-color: rgba(16, 185, 129, 0.1); padding: 15px; border-radius: var(--radius-lg); margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <span style="font-weight: 600;">Your Score:</span>
+              <span style="font-size: 24px; font-weight: 700; color: var(--success-color);">92%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 92%; background: linear-gradient(90deg, var(--success-color), #34d399);"></div>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; text-align: center;">
+            <div>
+              <p style="color: var(--text-secondary); font-size: 13px;">Questions</p>
+              <p style="font-weight: 600;">23/25</p>
+            </div>
+            <div>
+              <p style="color: var(--text-secondary); font-size: 13px;">Duration</p>
+              <p style="font-weight: 600;">30 min</p>
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="width: 100%;">View Results</button>
+        </div>
+
+        <!-- EXAM 3 - AVAILABLE -->
+        <div class="card" style="border: 2px dashed var(--primary-color);">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
+            <div>
+              <h3 style="margin-bottom: 8px;">UI/UX Design Final Exam</h3>
+              <p style="color: var(--text-secondary); font-size: 14px;">by Emma Davis</p>
+            </div>
+            <span class="badge badge-warning">Available</span>
+          </div>
+          <div style="background-color: rgba(245, 158, 11, 0.1); padding: 15px; border-radius: var(--radius-lg); margin-bottom: 20px;">
+            <p style="font-size: 14px; margin: 0;">📋 50 Questions • Duration: 60 minutes</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; text-align: center;">
+            <div>
+              <p style="color: var(--text-secondary); font-size: 13px;">Pass Score</p>
+              <p style="font-weight: 600;">70%</p>
+            </div>
+            <div>
+              <p style="color: var(--text-secondary); font-size: 13px;">Attempts Left</p>
+              <p style="font-weight: 600;">1</p>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="width: 100%;">Start Exam</button>
+        </div>
+
+        <!-- EXAM 4 - LOCKED -->
+        <div class="card" style="opacity: 0.6;">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
+            <div>
+              <h3 style="margin-bottom: 8px;">Mobile Development Midterm</h3>
+              <p style="color: var(--text-secondary); font-size: 14px;">by Michael Brown</p>
+            </div>
+            <span class="badge badge-info">Locked</span>
+          </div>
+          <div style="background-color: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: var(--radius-lg); margin-bottom: 20px;">
+            <p style="font-size: 14px; margin: 0;">🔒 Complete 60% of the course to unlock</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; text-align: center;">
+            <div>
+              <p style="color: var(--text-secondary); font-size: 13px;">Questions</p>
+              <p style="font-weight: 600;">?</p>
+            </div>
+            <div>
+              <p style="color: var(--text-secondary); font-size: 13px;">Duration</p>
+              <p style="font-weight: 600;">?</p>
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="width: 100%;" disabled>Locked</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    @media (max-width: 768px) {
+      .navbar-toggle {
+        display: block !important;
+      }
+      
+      .sidebar {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        height: calc(100vh - 60px);
+        transform: translateX(-100%);
+        z-index: 98;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+    }
+  </style>
+
+  <script src="../js/app.js"></script>
+  <script>
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (navbarToggle) {
+      navbarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

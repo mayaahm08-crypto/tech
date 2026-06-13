@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - EduLearn</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div style="display: flex; align-items: center; gap: 15px; flex: 1;">
+      <button class="navbar-toggle" style="background: none; border: none; font-size: 24px; cursor: pointer; display: none;">☰</button>
+      <div class="navbar-brand" style="margin: 0;">
+        🎓 <span>EduLearn</span>
+      </div>
+    </div>
+    <div class="navbar-actions">
+      <button class="theme-toggle" title="Toggle Dark Mode">🌙</button>
+      <div style="position: relative;">
+        <button style="background: none; border: none; font-size: 24px; cursor: pointer;">🔔</button>
+        <span style="position: absolute; top: 0; right: 0; background: var(--danger-color); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 12px;">3</span>
+      </div>
+      <div style="position: relative;">
+        <button style="background: none; border: none; font-size: 24px; cursor: pointer;">👤</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar closed">
+    <div class="sidebar-brand">
+      📚 Dashboard
+    </div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a href="student-dashboard.html" class="sidebar-menu-link active">
+          <span>📊</span> Dashboard
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="student-courses.html" class="sidebar-menu-link">
+          <span>📖</span> My Courses
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="exams.html" class="sidebar-menu-link">
+          <span>📝</span> Exams
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="progress.html" class="sidebar-menu-link">
+          <span>📈</span> Progress
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="student-profile.html" class="sidebar-menu-link">
+          <span>⚙️</span> Settings
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="#" class="sidebar-menu-link" onclick="PageNav.logout(); return false;">
+          <span>🚪</span> Logout
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">Welcome Back, Alex! 👋</h1>
+        <p class="page-subtitle">Continue your learning journey and achieve your goals</p>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container" style="padding: 40px 20px;">
+      <!-- STATS SECTION -->
+      <div class="grid grid-4" style="margin-bottom: 50px;">
+        <div class="stat-card">
+          <div class="stat-icon">📚</div>
+          <div class="stat-value">8</div>
+          <div class="stat-label">Courses Enrolled</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div class="stat-value">3</div>
+          <div class="stat-label">Courses Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-value">45%</div>
+          <div class="stat-label">Overall Progress</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-value">12</div>
+          <div class="stat-label">Achievements</div>
+        </div>
+      </div>
+
+      <!-- CONTINUE LEARNING SECTION -->
+      <div style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 30px;">Continue Learning</h2>
+        <div class="grid grid-3">
+          <div class="course-card">
+            <div class="course-image" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">💻</div>
+            <div class="course-content">
+              <h3 class="course-title">Web Development Bootcamp</h3>
+              <p class="course-instructor">by Alex Johnson</p>
+              <div style="margin-bottom: 15px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                  <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">65%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill" style="width: 65%;"></div>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="PageNav.goToPage('video-lesson')">Continue</button>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-image" style="background: linear-gradient(135deg, #ec4899, #f472b6);">🐍</div>
+            <div class="course-content">
+              <h3 class="course-title">Python for Data Science</h3>
+              <p class="course-instructor">by Dr. Sarah Chen</p>
+              <div style="margin-bottom: 15px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                  <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">42%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill" style="width: 42%;"></div>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="PageNav.goToPage('video-lesson')">Continue</button>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-image" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">🎨</div>
+            <div class="course-content">
+              <h3 class="course-title">UI/UX Design Fundamentals</h3>
+              <p class="course-instructor">by Emma Davis</p>
+              <div style="margin-bottom: 15px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                  <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">88%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="PageNav.goToPage('video-lesson')">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECOMMENDATIONS SECTION -->
+      <div style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 30px;">Recommended for You</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <div style="display: flex; gap: 15px;">
+              <div style="font-size: 50px;">📱</div>
+              <div>
+                <h3 style="margin-bottom: 8px;">Mobile App Development</h3>
+                <p style="font-size: 14px; margin-bottom: 10px;">by Michael Brown</p>
+                <div style="display: flex; gap: 10px;">
+                  <span class="badge badge-primary">Trending</span>
+                  <span class="badge badge-success">4.8★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div style="display: flex; gap: 15px;">
+              <div style="font-size: 50px;">📊</div>
+              <div>
+                <h3 style="margin-bottom: 8px;">Business Analytics</h3>
+                <p style="font-size: 14px; margin-bottom: 10px;">by Lisa Wong</p>
+                <div style="display: flex; gap: 10px;">
+                  <span class="badge badge-warning">Beginner</span>
+                  <span class="badge badge-success">4.6★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECENT ACTIVITY SECTION -->
+      <div>
+        <h2 style="margin-bottom: 30px;">Recent Activity</h2>
+        <div class="card">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color);">
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Activity</th>
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Course</th>
+                <th style="text-align: left; padding: 15px; font-weight: 600; color: var(--text-secondary);">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">✅ Completed Module</td>
+                <td style="padding: 15px;">Web Development Bootcamp</td>
+                <td style="padding: 15px; color: var(--text-secondary);">Today, 2:30 PM</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">📝 Quiz Completed</td>
+                <td style="padding: 15px;">Python for Data Science</td>
+                <td style="padding: 15px; color: var(--text-secondary);">Yesterday</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 15px;">📥 Downloaded Resource</td>
+                <td style="padding: 15px;">UI/UX Design Fundamentals</td>
+                <td style="padding: 15px; color: var(--text-secondary);">2 days ago</td>
+              </tr>
+              <tr>
+                <td style="padding: 15px;">🏆 Earned Badge</td>
+                <td style="padding: 15px;">Web Development Bootcamp</td>
+                <td style="padding: 15px; color: var(--text-secondary);">3 days ago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    @media (max-width: 768px) {
+      .navbar-toggle {
+        display: block !important;
+      }
+      
+      .sidebar {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        height: calc(100vh - 60px);
+        transform: translateX(-100%);
+        z-index: 98;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+    }
+  </style>
+
+  <script src="../js/app.js"></script>
+  <script>
+    // Navbar toggle functionality
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (navbarToggle) {
+      navbarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

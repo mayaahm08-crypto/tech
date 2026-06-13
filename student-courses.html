@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Courses - EduLearn</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div style="display: flex; align-items: center; gap: 15px; flex: 1;">
+      <button class="navbar-toggle" style="background: none; border: none; font-size: 24px; cursor: pointer; display: none;">☰</button>
+      <div class="navbar-brand" style="margin: 0;">
+        🎓 <span>EduLearn</span>
+      </div>
+    </div>
+    <div class="navbar-actions">
+      <button class="theme-toggle" title="Toggle Dark Mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar closed">
+    <div class="sidebar-brand">
+      📚 Dashboard
+    </div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a href="student-dashboard.html" class="sidebar-menu-link">
+          <span>📊</span> Dashboard
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="student-courses.html" class="sidebar-menu-link active">
+          <span>📖</span> My Courses
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="exams.html" class="sidebar-menu-link">
+          <span>📝</span> Exams
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="progress.html" class="sidebar-menu-link">
+          <span>📈</span> Progress
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="student-profile.html" class="sidebar-menu-link">
+          <span>⚙️</span> Settings
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="#" class="sidebar-menu-link" onclick="PageNav.logout(); return false;">
+          <span>🚪</span> Logout
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">My Courses</h1>
+        <p class="page-subtitle">8 courses • 3 completed • 5 in progress</p>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container" style="padding: 40px 20px;">
+      <!-- FILTERS -->
+      <div style="display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;">
+        <button class="btn btn-secondary btn-sm" style="background: var(--primary-color); color: white; border-color: var(--primary-color);">All</button>
+        <button class="btn btn-secondary btn-sm">In Progress</button>
+        <button class="btn btn-secondary btn-sm">Completed</button>
+        <button class="btn btn-secondary btn-sm">Wishlist</button>
+      </div>
+
+      <!-- SEARCH -->
+      <div style="margin-bottom: 30px;">
+        <input type="text" placeholder="Search courses..." style="width: 100%; padding: 12px 16px; border: 2px solid var(--border-color); border-radius: var(--radius-lg); font-size: 16px;">
+      </div>
+
+      <!-- COURSES GRID -->
+      <div class="grid grid-3">
+        <!-- Course 1 -->
+        <div class="course-card">
+          <div class="course-image" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">💻</div>
+          <div class="course-content">
+            <h3 class="course-title">Web Development Bootcamp</h3>
+            <p class="course-instructor">by Alex Johnson</p>
+            <div style="margin-bottom: 15px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">65%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 65%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-sm" style="width: 100%;">Continue</button>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card">
+          <div class="course-image" style="background: linear-gradient(135deg, #ec4899, #f472b6);">🐍</div>
+          <div class="course-content">
+            <h3 class="course-title">Python for Data Science</h3>
+            <p class="course-instructor">by Dr. Sarah Chen</p>
+            <div style="margin-bottom: 15px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">42%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 42%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-sm" style="width: 100%;">Continue</button>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card">
+          <div class="course-image" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">🎨</div>
+          <div class="course-content">
+            <h3 class="course-title">UI/UX Design Fundamentals</h3>
+            <p class="course-instructor">by Emma Davis</p>
+            <div style="margin-bottom: 15px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">88%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-sm" style="width: 100%;">Continue</button>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="course-card">
+          <div class="course-image" style="background: linear-gradient(135deg, #10b981, #34d399);">📱</div>
+          <div class="course-content">
+            <h3 class="course-title">Mobile App Development</h3>
+            <p class="course-instructor">by Michael Brown</p>
+            <div style="margin-bottom: 15px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">28%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 28%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-sm" style="width: 100%;">Continue</button>
+          </div>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="course-card">
+          <div class="course-image" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">📊</div>
+          <div class="course-content">
+            <h3 class="course-title">Business Analytics</h3>
+            <p class="course-instructor">by Lisa Wong</p>
+            <div style="margin-bottom: 15px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">100%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-sm" style="width: 100%;">Completed ✓</button>
+          </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="course-card">
+          <div class="course-image" style="background: linear-gradient(135deg, #a855f7, #d946ef);">🌐</div>
+          <div class="course-content">
+            <h3 class="course-title">Digital Marketing Mastery</h3>
+            <p class="course-instructor">by James Wilson</p>
+            <div style="margin-bottom: 15px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">100%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-sm" style="width: 100%;">Completed ✓</button>
+          </div>
+        </div>
+
+        <!-- Course 7 -->
+        <div class="course-card">
+          <div class="course-image" style="background: linear-gradient(135deg, #ef4444, #f87171);">💼</div>
+          <div class="course-content">
+            <h3 class="course-title">Project Management</h3>
+            <p class="course-instructor">by Robert Smith</p>
+            <div style="margin-bottom: 15px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 75%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-sm" style="width: 100%;">Continue</button>
+          </div>
+        </div>
+
+        <!-- Course 8 -->
+        <div class="course-card">
+          <div class="course-image" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">🔐</div>
+          <div class="course-content">
+            <h3 class="course-title">Cybersecurity Basics</h3>
+            <p class="course-instructor">by Dr. James Taylor</p>
+            <div style="margin-bottom: 15px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 13px; color: var(--text-secondary);">Progress</span>
+                <span style="font-size: 13px; color: var(--primary-color); font-weight: 600;">100%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-sm" style="width: 100%;">Completed ✓</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    @media (max-width: 768px) {
+      .navbar-toggle {
+        display: block !important;
+      }
+      
+      .sidebar {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        height: calc(100vh - 60px);
+        transform: translateX(-100%);
+        z-index: 98;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+    }
+  </style>
+
+  <script src="../js/app.js"></script>
+  <script>
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (navbarToggle) {
+      navbarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
